@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import RecipePanel from "./RecipePanel";
+import SingleHero from "./SingleHero";
 
-function Recipe() {
+function HerorecipePanel() {
   const [Recipe, setRecipe] = useState([]);
   useEffect(() => {
-        axios
-    .get(`${process.env.REACT_APP_API_URL}/getRecipe`, {
-      params: {
-        _limit: 20,
-      },
-    })
+    axios
+      .get(
+        "https://recipebackend-hzfn.onrender.com/craving",
+      )
       .then((res) => {
         setRecipe(res.data);
-        console.log(res.data);
+   
       })
       .catch((err) => {
         console.log(err);
@@ -22,28 +20,25 @@ function Recipe() {
 
   const NewRecipe = Recipe.map((recipe, index) => {
     return (
-      <RecipePanel
+      <SingleHero
         key={index}
         id={recipe._id}
         title={recipe.Title}
         body={recipe.Body}
-        ingredients = {recipe.ingredients}
+        ingredients={recipe.ingredients}
         image={recipe.image}
         time={recipe.time}
-        recipe={recipe}
         tag={recipe.tag}
+        recipe={recipe}
       />
     );
   });
 
-  return<>
-  
-  <div className="overal-post-container">{NewRecipe}</div> 
-  
-
-  
-  
-  </> 
+  return (
+    <>
+      <div className="hero-craving">{NewRecipe}</div>
+    </>
+  );
 }
 
-export default Recipe;
+export default HerorecipePanel;

@@ -1,16 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function SingleHero({ img, title }) {
+function SingleHero({
+  id,
+  title,
+  body,
+  image,
+  time,
+  ingredients,
+  tag,
+  recipe,
+}) {
   return (
-    <div className="hero-image-container">
-      <img className="hero-image-recipe" src={img} /> <br/>
-      <div className="hero-h3-style">
-        <p style={{ color:'#A3B763', fontSize:'12px', fontWeight:'700' }}>HEALTH</p>
-      <h3>{title}</h3> <br />
-        
+   
+      <div className="hero-image-container">
+        <img className="hero-image-recipe" src={image} /> <br />
+        <div className="hero-h3-style">
+          <p
+            style={{
+              color: "#A3B763",
+              fontSize: "12px",
+              fontWeight: "700",
+              textTransform: "uppercase",
+            }}
+          >
+            {tag}
+          </p>
+          <Link style={{ textDecoration:'none',color:'white' }} to={`/recipe/${id}`}><h3 className="hero-title">{title}</h3> </Link> <br />
+        </div>
       </div>
-    
-    </div>
+  
   );
 }
 

@@ -35,18 +35,23 @@ function Layout() {
             <span>:</span>
           </li>
           <li>
-            DINNER<span>:</span>
+          <Link to="/page/dinner" style={{ textDecoration: "none", color:"black" }}>DINNER <span>:</span> </Link>
+          </li>
+          
+          <li>
+          
+          <Link to="/page/recipe" style={{ textDecoration: "none", color:"black" }}>RECIPES <span>:</span> </Link>
+          </li>
+          
+          <li>
+          <Link to="/page/meals" style={{ textDecoration: "none", color:"black" }}>MEALS <span>:</span> </Link>
           </li>
           <li>
-            RECIPES <span>:</span>{" "}
+          <Link to="/page/news" style={{ textDecoration: "none", color:"black" }}>NEWS <span>:</span> </Link>
           </li>
           <li>
-            MEALS <span>:</span>{" "}
+          <Link to="/page/tips" style={{ textDecoration: "none", color:"black" }}>TIPS <span>:</span> </Link>
           </li>
-          <li>
-            FOOD NEWS <span>:</span>{" "}
-          </li>
-          <li>TIPS</li>
           <BsLightningCharge style={{ color: "grey" }} />
           <HiSearch style={{ color: "grey" }} />
           <FiShare2 style={{ color: "grey" }} />
@@ -58,20 +63,20 @@ function Layout() {
           onClick={toggleMenu}
         >
           <li>
-            <Link to="/" style={{ textDecoration: "none" }} className="active">
+            <Link to="/" style={{ textDecoration: "none", color:"black" }} className="active">
               HOME
             </Link>
           </li>
           <hr className="header-line" />
-          <li>DINNER</li>
+          <Link to="/page/dinner" style={{ textDecoration: "none", color:"black" }}><li>DINNER</li> </Link>
           <hr className="header-line" />
-          <li>RECIPES </li>
+          <Link to="/page/recipe" style={{ textDecoration: "none", color:"black" }}><li>RECIPES</li> </Link>
           <hr className="header-line" />
-          <li>MEALS </li>
+          <Link to="/page/meals" style={{ textDecoration: "none", color:"black" }}><li>MEALS</li> </Link>
           <hr className="header-line" />
-          <li>FOOD NEWS </li>
+          <Link to="/page/news" style={{ textDecoration: "none", color:"black" }}><li>FOOD NEWS</li> </Link>
           <hr className="header-line" />
-          <li>KITCHEN TIPS </li>
+          <Link to="/page/tips" style={{ textDecoration: "none", color:"black" }}><li>KITCHEN TIPS</li> </Link>
           <hr className="header-line" />
           <li>
            
@@ -84,7 +89,7 @@ function Layout() {
       </div>
       <hr className="line-recipe" />
 
-      <div className="wrapper">
+      <div>
         <Outlet />
       </div>
       <div>

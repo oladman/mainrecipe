@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react'
 import { Link } from "react-router-dom";
 import { IoMdTime } from "react-icons/io";
 
-function RecipePanel({ id, title, body, image, time,tag, ingredients, recipe }) {
+function Minspanel({ id, title, body, image, time, ingredients,tag, recipe }) {
+    
   return (
     <><Link
     style={{ textDecoration: "none", color: "black" }}
@@ -12,7 +13,7 @@ function RecipePanel({ id, title, body, image, time,tag, ingredients, recipe }) 
       
         <div className="top-img">
           <img src={image} />
-          <p style={{ fontWeight:'700', color:'#31304D', marginLeft:'10px'}}> {tag}</p>
+          <p style={{ fontWeight:'700', color:'#31304D', marginLeft:'10px',  }}>{tag}</p>
         </div>
       
         <div className="bottom">
@@ -24,7 +25,7 @@ function RecipePanel({ id, title, body, image, time,tag, ingredients, recipe }) 
     </div>
     </Link>
     </>
-  );
+  )
 }
 
-export default RecipePanel;
+export default Minspanel

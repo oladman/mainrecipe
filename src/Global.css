@@ -15,21 +15,19 @@
   justify-content: space-between;
   width: 100%;
   gap: 20px;
+  cursor: pointer;
 }
-.hero-recipe-container div:hover {
-  background: rgba(177, 82, 82, 0.5);
-}
+
 .hero-image-recipe {
   width: 100%;
   max-width: 400px;
   height: auto;
-}
-
-.hero-image-recipe {
   object-fit: cover;
   object-position: center;
   border-radius: 5px;
 }
+
+
 
 .latest-post {
   margin-left: 0;
@@ -40,12 +38,7 @@
   color: #141e46;
 }
 
-.hero-image-container {
-  position: relative;
-  cursor: pointer;
-  opacity: 0.8;
-  width: 100%;
-}
+
 .hero-h3-style {
   position: absolute;
   bottom: 0;
@@ -53,6 +46,7 @@
   padding: 10px;
   width: 100%;
   color: white;
+
 }
 
 .subscribe-input {
@@ -118,7 +112,7 @@
 }
 
 .Read-Recipe {
-  margin-left: 0rem;
+  margin-left: 1rem;
   margin-right: 0rem;
   width: 60%;
 }
@@ -127,6 +121,7 @@
   text-align: justify;
   font-size: 16px;
   line-height: 30px;
+  margin: 0 10px 0 10px;
 }
 .Read-Recipe-Overall {
   width: 100%;
@@ -143,6 +138,7 @@ li:active {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-left: 50px;
 }
 .advert-recipe > div {
   margin-bottom: 50px;
@@ -222,33 +218,11 @@ li:active {
   font-size: 18px;
   font-weight: 600;
 }
-.top-img {
-  width: 100%;
-  height: 250px;
-}
-.top-img img {
-  width: 100%;
-  max-height: 220px;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-}
-
-.bottom p {
-  font-size: 20px;
-  padding: 10px;
-}
-.post-container:hover {
-  transform: scale(1.025);
-}
-.hover-hover:hover {
-color: #FF5B22;
-
-}
 .post-container {
   max-width: 320px;
-  width: 100%;
-  height: 320px;
+  min-width: 320px;
+  max-height: 350px;
+  min-height: 350px;
   margin-top: 10px;
   border: 2px solid #f2f2f2;
   overflow: hidden;
@@ -262,6 +236,40 @@ color: #FF5B22;
   align-items: center;
   justify-content: space-between;
 }
+.top-img {
+  width: 100%;
+  height: 235px;
+}
+.top-img img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+height: 115px;
+width: 100%;
+
+}
+
+.hover-hover{
+  font-size: 20px;
+  padding: 0 0 10px 10px;
+}
+
+.post-container:hover {
+  transform: scale(1.025);
+}
+.hover-hover:hover {
+color: #FF5B22;
+
+}
+
+
 
 .see-all {
   display: none;
@@ -425,6 +433,7 @@ color: #FF5B22;
 .edit-delete-style {
   display: flex;
   justify-content: space-between;
+  margin: 0 20px 0 20px;
 }
 .read-recipe-image {
   width: 100%;
@@ -434,9 +443,7 @@ color: #FF5B22;
   object-position: center;
 
 }
-.newcommot{
-  
-}
+
 
 .hot-trending {
   display: flex;
@@ -544,9 +551,92 @@ border-bottom: 2px solid #557C55;
 border-bottom: 1.5px solid red;
 }
 
+.time-style{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  font-size: 13px;
+  color: #6B240C;
+  margin-bottom: 10px;
+}
+.read-image-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-two img{
+  width: 250px;
+}
+
+
+.category-recipe:hover{
+  opacity: 0.6;
+color: red;
+}
+
+.cover-dessert{
+  width: 100%;
+}
+
+.desert-img-style{
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.desert-img-box{
+  position: relative;
+}
+.desert-img-box h1{
+  background-color: white;
+  position:absolute;
+  bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px
+
+}
+
+.hero-title:hover{
+color:#ff8f8f;
+}
+.hero-image-container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.8;
+  width: 100%;
+  max-width: 400px;
+  max-height:322px;
+  
+}
+.hero-craving{
+  display: flex;
+  gap: 10px;
+}
+.explore-desert h1{
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  margin-top: 20px;
+}
+
+.hero-image-container:hover{
+opacity:0.7;
+}
+
 @media only screen and (max-width: 1280px) {
   .wrapper {
     max-width: 1024px;
+  }
+  .post-container {
+    max-width: 320px;
+    width: 100%;
+    max-height: 500px;
+ 
   }
 }
 
@@ -654,7 +744,8 @@ border-bottom: 1.5px solid red;
   .post-container {
     max-width: 552px;
     width: 100%;
-    height: auto;
+    max-height: 450px;
+   
     margin-top: 10px;
     overflow: hidden;
     margin-bottom: 0px;

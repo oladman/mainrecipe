@@ -9,7 +9,7 @@ function Hot() {
   useEffect(() => {
     axios
       .get(
-        "https://updatedrecipebackend.onrender.com/gethotone",
+        "https://recipebackend-hzfn.onrender.com/gethotone",
 
         {
           params: {

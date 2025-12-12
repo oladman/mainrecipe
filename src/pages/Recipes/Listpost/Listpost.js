@@ -5,25 +5,22 @@ import ListpostPanel from "./ListpostPanel";
 
 function Listpost() {
   const [Recipe, setRecipe] = useState([]);
-  useEffect(() => {
-    axios
-      .get(
-        "https://updatedrecipebackend.onrender.com/gethotseven",
+useEffect(() => {
+  axios
+    .get(`${process.env.REACT_APP_API_URL}/gethotseven`, {
+      params: {
+        _limit: 1,
+      },
+    })
+    .then((res) => {
+      setRecipe(res.data);
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}, []);
 
-        {
-          params: {
-            _limit: 1,
-          },
-        }
-      )
-      .then((res) => {
-        setRecipe(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
 
   const HotRecipe = Recipe.map((recipe, index) => {
     return (

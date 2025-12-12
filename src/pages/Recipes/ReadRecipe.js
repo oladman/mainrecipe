@@ -16,7 +16,7 @@ function ReadRecipe() {
 
   useEffect(() => {
     axios
-      .get("https://updatedrecipebackend.onrender.com/getRecipe/" + id)
+   .get(`${process.env.REACT_APP_API_URL}/getRecipe/${id}`)
       .then((res) => {
         setRecipe(res.data);
       })
@@ -27,8 +27,7 @@ function ReadRecipe() {
   }, []);
 
   const handleDelete = (id) => {
-    axios
-      .delete("https://updatedrecipebackend.onrender.com/delete/" + id)
+    axios.delete(`${process.env.REACT_APP_API_URL}/delete/${id}`)       
       .then((res) => {
         console.log(res);
         navigate("/");
@@ -86,10 +85,10 @@ function ReadRecipe() {
           <img src="/ad1.jpg" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>{" "}
         </div>
-        <img className="read-recipe-image"
+        <div className="read-image-style"><img className="read-recipe-image"
           style={{  marginTop: "20px", marginBottom: "10px" }}
           src={recipe.image}
-        />
+        /> </div>
 
         {recipe.ingredients && (
           <div className="overal-ingredients">
@@ -113,8 +112,8 @@ function ReadRecipe() {
       </div>
       <div className="advert-recipe">
         <h2>Advertisement</h2>
-        <div>
-          {" "}
+        <div className="ad-two">
+          
           <img src="/ad1.jpg" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>{" "}
         </div>
@@ -122,7 +121,7 @@ function ReadRecipe() {
           <img src="/ad2.jpg" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>
         </div>
-        <div>
+        <div className="ad-two">
           <img src="/ad3.jpg" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>
         </div>

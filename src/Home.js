@@ -11,12 +11,11 @@ import Hot from "./components/Hot";
 import Listpost from "./pages/Recipes/Listpost/Listpost";
 import List from "./pages/Recipes/Listpost/List";
 
-
-
 function Home() {
   return (
     <div className="wrapper">
       <HeroRecipe />
+     
 
       <div className="sub-sub-sub">
         <SubscribeRecipe />
