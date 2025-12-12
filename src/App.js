@@ -29,14 +29,6 @@ import Meals from "./pages/Category/cat-list/Meals";
 import Foodnews from "./pages/Category/cat-list/Foodnews";
 import KitchenTips from "./pages/Category/cat-list/KitchenTips";
 
-
-
-
-
-
-
-
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -58,12 +50,6 @@ const router = createBrowserRouter(
       <Route path="/page/meals" element={<Meals />} />
       <Route path="/page/news" element={<Foodnews />} />\
       <Route path="/page/tips" element={<KitchenTips />} />
-
-
-      
-     
-
-
           </Route>
     
 
