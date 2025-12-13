@@ -10,7 +10,7 @@ import "./Global.css";
 import SingleHero from "./components/SingleHero";
 import LatestRecipe from "./components/LatestRecipe";
 import SubscribeRecipe from "./components/SubscribeRecipe";
-import HeroRecipe from "./components/HeroRecipe";
+import HeroRecipe from "./components/hero/HeroRecipe";
 import Home from "./Home";
 import PostRecipe from "./pages/Post/PostRecipe";
 import ReadRecipe from "./pages/Recipes/ReadRecipe";

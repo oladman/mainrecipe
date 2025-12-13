@@ -3,7 +3,7 @@ import "./Global.css";
 import SingleHero from "./components/SingleHero";
 import LatestRecipe from "./components/LatestRecipe";
 import SubscribeRecipe from "./components/SubscribeRecipe";
-import HeroRecipe from "./components/HeroRecipe";
+import HeroRecipe from "./components/hero/HeroRecipe";
 import Recipe from "./pages/Recipes/Recipe";
 import CategoryRecipe from "./pages/Category/CategoryRecipe";
 import { PiBowlFoodBold } from "react-icons/pi";
@@ -13,10 +13,8 @@ import List from "./pages/Recipes/Listpost/List";
 
 function Home() {
   return (
-    <div className="wrapper">
+    <div id="wrapper">
       <HeroRecipe />
-     
-
       <div className="sub-sub-sub">
         <SubscribeRecipe />
       </div>

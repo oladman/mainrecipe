@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import SingleHero from "./SingleHero";
+import SingleHero from "../SingleHero";
 
 function HerorecipePanel() {
   const [Recipe, setRecipe] = useState([]);
@@ -11,6 +11,7 @@ function HerorecipePanel() {
       )
       .then((res) => {
         setRecipe(res.data);
+        console.log('craving', res.data)
    
       })
       .catch((err) => {

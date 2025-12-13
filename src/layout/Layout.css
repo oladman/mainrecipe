@@ -1,74 +1,102 @@
-.Header {
+/* HEADER */
+.header {
+  height: 64px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3rem;
-  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo {
-  width: 12.5rem;
+.logo img {
+  height: 40px;
 }
 
-.ul-layout {
-  font-weight: 700;
-  font-size: 12px;
+/* DESKTOP NAV */
+.nav-desktop {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
-.ul-layout li {
-  list-style: none;
-}
-.ul-layout li span {
-  margin-left: 5px;
+.nav-desktop a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
 }
 
-.line-recipe {
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 200;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.nav-mobile a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 16px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 150;
+}
+
+/* ADD RECIPE */
+.add-recipe {
   margin-top: 20px;
-  border: 1px solid #f2f2f2;
+  font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .wrapper {
-    max-width: 640px;
-  }
-
-  .ul-layout {
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-desktop {
     display: none;
   }
 
-  .ul-layout-mobile{
+  .hamburger {
     display: block;
-  }
-
-  .Hamburger{
-    display: block;
-  }
-
-  .Header {
-    justify-content: flex-start;
-    padding: 0 3rem;
-  }
-  .Header{
-    position: relative;
-  }
-  .ul-layout-mobile.is-open {
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 90px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    background-color: #fff;
-    z-index: 999;
-    transition: 0.2s;
-    font-size: 20px;
-    gap: 10px;
   }
 }

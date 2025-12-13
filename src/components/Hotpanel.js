@@ -14,9 +14,12 @@ function Hotpanel({id, title, body, image, ingredients, description}) {
      {title}
     </h1>
     <p>
-      {description}
-    </p> 
-    <span>By Oladman</span></div>
+  {description?.length > 100
+    ? description.slice(0, 100) + "..."
+    : description}
+</p>
+
+  </div>
   </div> </Link>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import './Layout.css'
-import { MdFormatAlignJustify } from 'react-icons/md'
 import{ Link} from 'react-router-dom'
 
 function Footer() {
