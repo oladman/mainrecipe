@@ -29,7 +29,6 @@ function SingleHero({
         >
           {tag}
         </p>
-        <h3 className="hero-title">{title}</h3>
       </div>
     </Link>
   );
