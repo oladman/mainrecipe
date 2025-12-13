@@ -39,7 +39,7 @@ function ReadRecipe() {
   };
 
   return (
-    <div className="Read-Recipe-Overall">
+    <div id="wrapper" className="Read-Recipe-Overall">
       <div className="Read-Recipe">
         <h1>{recipe.Title}</h1>
         <div className="icon-recipe-group">
@@ -56,7 +56,7 @@ function ReadRecipe() {
             <MdStarRate /> <p>RATE</p>
           </div>
         </div>
-        <div className="edit-delete-style">
+       {/* <div className="edit-delete-style">
           <button className="edit-delete-button">
             <Link
               style={{ textDecoration: "none", color: "red" }}
@@ -75,18 +75,17 @@ function ReadRecipe() {
           <button onClick={() => handleDelete(id)} className="edit-delete-button">
           <FaDeleteLeft   />  DELETE
           </button>
-        </div>
+        </div>*/}
         <br />
 
         <p className="text-recipe">{recipe.Description} </p>
         <br />
         <div className="m-ad">
        
-          <img src="/ad1.jpg" />
+          <img src="/ad1.jpg" alt="Advertisement" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>{" "}
         </div>
-        <div className="read-image-style"><img className="read-recipe-image"
-          style={{  marginTop: "20px", marginBottom: "10px" }}
+        <div className="read-image-style"><img className="read-recipe-image" alt={recipe.Title}
           src={recipe.image}
         /> </div>
 
@@ -104,25 +103,25 @@ function ReadRecipe() {
           </div>
         )}
         <div className="m-ad">
-          <img src="/ad2.jpg" />
+          <img src="/ad2.jpg" alt="advertisement"/>
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>
         </div>
 
-        <p className="text-recipe">{recipe.Body}</p>
+        <p className="body-text">{recipe.Body}</p>
       </div>
       <div className="advert-recipe">
-        <h2>Advertisement</h2>
+        <h2>Fake Advertisement</h2>
         <div className="ad-two">
           
-          <img src="/ad1.jpg" />
+          <img src="/ad1.jpg" alt="advertisement" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>{" "}
         </div>
         <div className="ad-two">
-          <img src="/ad2.jpg" />
+          <img src="/ad2.jpg" alt="advertisement" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>
         </div>
         <div className="ad-two">
-          <img src="/ad3.jpg" />
+          <img src="/ad3.jpg" alt="advertisement" />
           <p style={{ fontSize: "12px" }}>Some Advertisement</p>
         </div>
       </div>
