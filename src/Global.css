@@ -441,7 +441,6 @@ li:active {
   width: 100%;
   max-height: 15.3rem;
   overflow: hidden;
-  margin-top: 10px;
 }
 
 .list-right-up {
@@ -466,7 +465,6 @@ li:active {
 }
 
 .sevenhot-recipe {
-  margin-top: 20px;
   border: 1px solid #f2f2f2;
 }
 
@@ -569,7 +567,7 @@ li:active {
   .hero-craving {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(12px, 6vw, 100px);
+    gap: clamp(12px, 4vw, 100px);
   }
   .read-recipe-image {
     height: 300px;
@@ -810,6 +808,7 @@ li:active {
   .hot-text h1 {
     font-weight: 500;
     color: #b6bbc4;
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 300px) {
