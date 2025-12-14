@@ -25,7 +25,10 @@ function RecipePanel({
       <div className="bottom-post-container">
         {tag && <p className="bottom-post-tag">{tag}</p>}
 
-        <p className="hover-hover">{title}</p>
+        <p className="hover-hover">
+  {title?.length > 35 ? title.slice(0, 30) + "…" : title}
+</p>
+
         <p className="time-style">
           <IoMdTime /> {time}
         </p>

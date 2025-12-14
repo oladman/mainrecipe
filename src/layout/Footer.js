@@ -1,63 +1,64 @@
-import React from 'react'
-import './Layout.css'
-import{ Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Layout.css";
 
 function Footer() {
   return (
-    <div className='footer'>
-    <div className='inner-footer'>
-<div className='footer-recipe'><img  style={{ width:'150px' }} src='/therecipelogo.png' />
-<p className='footer-p'>We create possibilities <br/> for the connected world. <br/> <p style={{ fontWeight:'700' }}>BE BOLD.</p></p>
-</div>
-<div className='footer-recipe'>
-    <p className='footer-p-up'>Explore</p>
-    <p className='footer-p'>Home</p>
-    <p className='footer-p'>About</p>
-    <p className='footer-p'>Careers</p>
-</div>
-<div className='footer-recipe'>
-<p className='footer-p-up'>Follow</p>
-    <p className='footer-p'>Instagram</p>
-    <p className='footer-p'>Twitter (X)</p>
-    <p className='footer-p'>LinkedIn</p>
-</div>
-<div className='footer-recipe'>
-<p className='footer-p-up'>Legal</p>
-    <p className='footer-p'>Terms</p>
-    <p className='footer-p'>Privacy</p>
-    
-</div>
-<div className='footer-recipe'>
-<p className='footer-p-up'>Advertise With Us</p>
-    <p className='footer-p'>Know More</p>
-    <p className='footer-p'>Therecipe2023@gmail.com</p>
-   
-</div>
+    <footer className="site-footer">
+      <div className="footer-wrapper">
+        {/* Brand */}
+        <div className="footer-section footer-brand">
+          <img src="/therecipelogo.png" alt="TheRecipe logo" />
+          <p>
+            We create possibilities 
+            for the connected world.
+          </p>
+        </div>
 
-<div className='footer-recipe'>
-<p className='footer-p-up'>Add a Recipe</p>
-    <button className='footer-button'><Link style={{ textDecoration:'none', color:'red' }} to='/post-recipe'>ADD RECIPE</Link></button>
-    
-   
-</div>
+        {/* Explore */}
+        <div className="footer-section">
+          <h4>Explore</h4>
+          <p>Home</p>
+          <p>About</p>
+          <p>Careers</p>
+        </div>
 
+        {/* Follow */}
+        <div className="footer-section">
+          <h4>Follow</h4>
+          <p>Instagram</p>
+          <p>Twitter (X)</p>
+          <p>LinkedIn</p>
+        </div>
 
-</div>
-<div className='M-footer'>
-    <div className='footer-recipe'><img  style={{ width:'150px' }} src='/therecipelogo.png' />
-<p className='footer-p'>We create possibilities <br/> for the connected world. <br/> <p style={{ fontWeight:'700' }}>BE BOLD.</p></p>
-</div>
-<div className='li-footer'> <p className='footer-p-up'>Explore</p>
-<p className='footer-p-up'>Follow</p>
-<p className='footer-p-up'>Legal</p>
-<p className='footer-p-up'>Advertise With Us</p>
+        {/* Legal */}
+        <div className="footer-section">
+          <h4>Legal</h4>
+          <p>Terms</p>
+          <p>Privacy</p>
+        </div>
 
-</div>
-</div>
-<p className='footer-p'>©2023 TheRecipe, All Rights Reserved.</p>
-    </div>
-    
-  )
+        {/* Advertise */}
+        <div className="footer-section">
+          <h4>Advertise With Us</h4>
+          <p>Know More</p>
+          <p>info@therecipe.com</p>
+        </div>
+
+        {/* CTA */}
+        <div className="footer-section footer-cta">
+          <h4>Add a Recipe</h4>
+          <Link to="/post-recipe" className="footer-cta-button">
+            ADD RECIPE
+          </Link>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        ©2023 TheRecipe, All Rights Reserved.
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

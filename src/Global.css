@@ -266,32 +266,7 @@ li:active {
   display: none;
 }
 
-/*FOOTER START */
-.footer-style {
-  width: 100%;
-}
-.footer {
-  background-color: #000000;
-  color: white;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 20px;
-}
 
-.inner-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.footer-p {
-  font-size: 12px;
-  font-weight: 200;
-  line-height: 20px;
-}
 
 ::marker {
   color: #ff8f8f;
@@ -305,14 +280,7 @@ li:active {
   padding: 20px;
   background-color: #f2f2f2;
 }
-.footer-button {
-  background-color: white;
-  border: none;
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-  font-weight: 700;
-}
+
 
 .btn-addingredient {
   background-color: #000000;
@@ -334,17 +302,7 @@ li:active {
   font-weight: 700;
 }
 
-.footer-p-up {
-  margin-bottom: 20px;
-}
 
-.footer-recipe {
-  margin-bottom: 20px;
-}
-
-.M-footer {
-  display: none;
-}
 .Hamburger {
   display: none;
 }
@@ -503,7 +461,8 @@ li:active {
   cursor: pointer;
 }
 .list-right-down:hover {
-  border-bottom: 2px solid #557c55;
+  border-bottom: 1px solid #000;
+  width: fit-content;
 }
 
 .sevenhot-recipe {
@@ -703,7 +662,9 @@ li:active {
     font-size: 20px;
     gap: 10px;
   }
-
+.footer {
+  padding: 20px;
+}
   .inner-footer {
     display: none;
   }
@@ -790,18 +751,29 @@ li:active {
 
   .parent-post-container {
     margin-top: 0;
-    aspect-ratio: 1/1.1;
+    aspect-ratio: 1/.65;
     max-width: 600px;
   }
 
   .top-img {
-    aspect-ratio: 1/0.6;
+    aspect-ratio: 1/0.4;
   }
 }
 
 @media only screen and (max-width: 475px) {
   .hero-recipe-container {
     margin-top: 25px;
+  }
+    .parent-post-container {
+    margin-top: 0;
+    aspect-ratio: 1/.75;
+    max-width: 600px;
+  }
+.list-left {
+  margin-right:.8rem;
+}
+  .top-img {
+    aspect-ratio: 1/0.4;
   }
   .hero-recipe {
     margin: 20px 0px 0 0px;
@@ -839,4 +811,23 @@ li:active {
     font-weight: 500;
     color: #b6bbc4;
   }
+}
+@media only screen and (max-width: 300px) {
+    .parent-post-container {
+    margin-top: 0;
+    aspect-ratio: 1/.9;
+    max-width: 600px;
+  }
+
+  .top-img {
+    aspect-ratio: 1/0.4;
+  }
+}
+@media only screen and (max-width: 200px) {
+    .parent-post-container {
+    margin-top: 0;
+    aspect-ratio: 1/1.1;
+    max-width: 600px;
+  }
+
 }
