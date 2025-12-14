@@ -76,22 +76,15 @@
 .subscribe-input:hover {
   background-color: #1a1a1a;
 }
-.sub-sub-sub {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .subscribe-recipe {
-  margin: 3rem 0rem 3rem 0rem;
+  margin: 2rem 0rem 2rem 0rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #5c5b5b;
   padding: 1.25rem;
   color: white;
-  width: 100%;
+  border-radius: 5px;
 }
 .input-recipe {
   display: flex;
@@ -114,16 +107,15 @@
   text-align: left;
   font-size: 16px;
   line-height: 25px;
-  color: #4D4D4D;
+  color: #4d4d4d;
   margin-top: 20px;
 }
-.body-text{
+.body-text {
   text-align: left;
   font-size: 16px;
   line-height: 25px;
-  color: #4D4D4D;
+  color: #4d4d4d;
   margin-top: 20px;
-
 }
 .Read-Recipe-Overall {
   width: 100%;
@@ -221,22 +213,18 @@ li:active {
   font-size: 18px;
   font-weight: 600;
 }
-.parent-post-container{
+.parent-post-container {
   max-width: 320px;
   width: 100%;
-  aspect-ratio: 1/.9;
-    margin-top: 10px;
+  aspect-ratio: 1/0.9;
+  margin-top: 10px;
   border: 2px solid #f2f2f2;
   overflow: hidden;
   margin-bottom: 0px;
   border-radius: 5px;
   transition: 200ms transform ease-in-out;
 }
-.post-container {
-  width: 100%;
-  height: 100%;
 
-}
 .overal-post-container {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +233,7 @@ li:active {
 }
 .top-img {
   max-width: 100%;
- aspect-ratio: 1/.6;
+  aspect-ratio: 1/0.6;
 }
 .top-img img {
   width: 100%;
@@ -264,6 +252,7 @@ li:active {
 
 .hover-hover {
   font-size: 14px;
+  margin-top: 10px;
 }
 
 .post-container:hover {
@@ -303,8 +292,6 @@ li:active {
   font-weight: 200;
   line-height: 20px;
 }
-
-
 
 ::marker {
   color: #ff8f8f;
@@ -426,7 +413,7 @@ li:active {
 }
 .read-recipe-image {
   width: 100%;
-  height:400px;
+  height: 400px;
   object-fit: cover;
   object-position: center;
 }
@@ -531,12 +518,11 @@ li:active {
 .time-style {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13px;
+  gap: 5px;
+  font-size: 12px;
   color: #6b240c;
-
+  margin-top: 10px;
 }
-
 
 .ad-two img {
   width: 250px;
@@ -602,7 +588,14 @@ li:active {
   align-items: center;
   gap: 10px;
 }
-
+.bottom-post-tag {
+  color: #fff;
+  background-color: #213448;
+  width: fit-content;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 2px;
+}
 @media only screen and (max-width: 1024px) {
   .subscribe-recipe {
     display: none;
@@ -619,19 +612,19 @@ li:active {
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(12px, 6vw, 100px);
   }
-.read-recipe-image {
-  height:300px;
-  object-fit: cover;
-  object-position: center;
-}
+  .read-recipe-image {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
   .hero-image-container {
     width: 100%;
     max-width: 250px;
     aspect-ratio: 1 / 1;
   }
-.text-recipe {
-  margin-top: 0px;
-}
+  .text-recipe {
+    margin-top: 0px;
+  }
   .hero-image-recipe {
     width: 100%;
     height: 100%;
@@ -653,30 +646,30 @@ li:active {
   .input-sub-style {
     padding: 8px;
   }
-  .body-text{
-  margin-top: 20px;
-  line-height: 30px;
+  .body-text {
+    margin-top: 20px;
+    line-height: 30px;
+  }
+  .parent-post-container {
+    margin-top: 0;
+    aspect-ratio: 1/1.1;
+  }
 
-}
-.parent-post-container{
-  margin-top: 0;
-  aspect-ratio: 1/1.4;
-}
-.top-img {
- aspect-ratio: 1/.6;
-}
-.advert-recipe {
-  margin-top: 50px;
-  align-items: center;
-  width: 100%;
-}
-.advert-recipe > div {
-  margin-bottom: 50px;
-}
+  .top-img {
+    aspect-ratio: 1/0.6;
+  }
+  .advert-recipe {
+    margin-top: 50px;
+    align-items: center;
+    width: 100%;
+  }
+  .advert-recipe > div {
+    margin-bottom: 50px;
+  }
   .overal-ingredients {
-  padding: 10px 0px;
-  font-size: 12px;
-}
+    padding: 10px 0px;
+    font-size: 12px;
+  }
   .sub-scribe p {
     font-size: 20px;
   }
@@ -719,12 +712,11 @@ li:active {
   }
   .overal-post-container {
     display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(12px, 4vw, 50px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(12px, 4vw, 50px);
     align-items: center;
     justify-content: center;
   }
-
 
   .Read-Recipe h1 {
     font-size: 2rem;
@@ -740,15 +732,6 @@ li:active {
     font-size: 20px;
     gap: 10px;
     margin-top: 10px;
-    margin-bottom: 0px;
-  }
-
-  .post-container {
-    max-width: 552px;
-    width: 100%;
-    max-height: 450px;
-    margin-top: 10px;
-    overflow: hidden;
     margin-bottom: 0px;
   }
 
@@ -795,6 +778,24 @@ li:active {
   }
   .list-left img {
     height: 100px;
+  }
+  .overal-post-container {
+  display: grid;
+  grid-template-columns: 1fr; /* one column */
+  gap: clamp(12px, 4vw, 50px);
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .parent-post-container {
+    margin-top: 0;
+    aspect-ratio: 1/1.1;
+    max-width: 600px;
+  }
+
+  .top-img {
+    aspect-ratio: 1/0.6;
   }
 }
 

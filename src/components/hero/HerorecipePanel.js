@@ -11,7 +11,6 @@ function HerorecipePanel() {
       )
       .then((res) => {
         setRecipe(res.data);
-        console.log('craving', res.data)
    
       })
       .catch((err) => {

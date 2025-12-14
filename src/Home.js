@@ -1,23 +1,17 @@
 import React from "react";
 import "./Global.css";
-import SingleHero from "./components/SingleHero";
-import LatestRecipe from "./components/LatestRecipe";
 import SubscribeRecipe from "./components/SubscribeRecipe";
 import HeroRecipe from "./components/hero/HeroRecipe";
 import Recipe from "./pages/Recipes/Recipe";
 import CategoryRecipe from "./pages/Category/CategoryRecipe";
 import { PiBowlFoodBold } from "react-icons/pi";
 import Hot from "./components/Hot";
-import Listpost from "./pages/Recipes/Listpost/Listpost";
 import List from "./pages/Recipes/Listpost/List";
 
 function Home() {
   return (
     <div id="wrapper">
       <HeroRecipe />
-      <div className="sub-sub-sub">
-        <SubscribeRecipe />
-      </div>
       <Hot />
       <CategoryRecipe />
       <List />
@@ -31,6 +25,7 @@ function Home() {
 
         <Recipe />
       </div>
+      <SubscribeRecipe />
     </div>
   );
 }

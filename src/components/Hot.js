@@ -19,7 +19,6 @@ function Hot() {
       )
       .then((res) => {
         setRecipe(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
