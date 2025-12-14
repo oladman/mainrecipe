@@ -1,64 +1,57 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Layout.css";
+import "./Footer.css";
 
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="footer-wrapper">
-        {/* Brand */}
-        <div className="footer-section footer-brand">
+    <footer className="footer">
+      <div className="footer-top">
+        <div className="footer-brand">
           <img src="/therecipelogo.png" alt="TheRecipe logo" />
-          <p>
-            We create possibilities 
-            for the connected world.
-          </p>
+
+          <p className="newsletter-text">Signup for our Newsletter</p>
+
+          <div className="newsletter-input">
+            <input type="email" placeholder="Enter your email" />
+            <button aria-label="Subscribe">
+              →
+            </button>
+          </div>
         </div>
 
-        {/* Explore */}
-        <div className="footer-section">
-          <h4>Explore</h4>
-          <p>Home</p>
-          <p>About</p>
-          <p>Careers</p>
-        </div>
+        <div className="footer-links">
+          <div className="link-column">
+            <h4>Product</h4>
+            <a href="#">What's New?</a>
+            <a href="#">Delivery Locations</a>
+            <a href="#">Meal Categories</a>
+            <a href="#">Gift Cards</a>
+          </div>
 
-        {/* Follow */}
-        <div className="footer-section">
-          <h4>Follow</h4>
-          <p>Instagram</p>
-          <p>Twitter (X)</p>
-          <p>LinkedIn</p>
-        </div>
+          <div className="link-column">
+            <h4>Support</h4>
+            <a href="#">Help Centre</a>
+            <a href="#">Delivery FAQs</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Refund Policy</a>
+          </div>
 
-        {/* Legal */}
-        <div className="footer-section">
-          <h4>Legal</h4>
-          <p>Terms</p>
-          <p>Privacy</p>
-        </div>
-
-        {/* Advertise */}
-        <div className="footer-section">
-          <h4>Advertise With Us</h4>
-          <p>Know More</p>
-          <p>info@therecipe.com</p>
-        </div>
-
-        {/* CTA */}
-        <div className="footer-section footer-cta">
-          <h4>Add a Recipe</h4>
-          <Link to="/post-recipe" className="footer-cta-button">
-            ADD RECIPE
-          </Link>
+          <div className="link-column">
+            <h4>Legal</h4>
+            <a href="#">Terms of Services</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Delivery Agreement</a>
+          </div>
         </div>
       </div>
-
       <div className="footer-bottom">
-        ©2023 TheRecipe, All Rights Reserved.
+        <p>© 2024 TheRecipe. Deliciousness Delivered. All rights reserved.</p>
+
+        <div className="social-icons">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="X">✕</a>
+        </div>
       </div>
     </footer>
   );
 }
-
-export default Footer;
