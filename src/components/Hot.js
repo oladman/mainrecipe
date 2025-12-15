@@ -1,49 +1,43 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Hotpanel from "./Hotpanel";
-
+import HotSkeleton from "./HotSkeleton";
 
 function Hot() {
+  const [recipe, setRecipe] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [Recipe, setRecipe] = useState([]);
   useEffect(() => {
     axios
-      .get(
-        "https://recipebackend-hzfn.onrender.com/gethotone",
-
-        {
-          params: {
-            _limit: 1,
-          },
-        }
-      )
+      .get(`${process.env.REACT_APP_API_URL}/gethotone`)
       .then((res) => {
         setRecipe(res.data);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch(console.error)
+      .finally(() => setLoading(false));
   }, []);
 
-  const HotRecipe = Recipe.map((recipe, index) => {
-    return (
-      <Hotpanel
-        key={index}
-        id={recipe._id}
-        title={recipe.Title}
-        body={recipe.Body}
-        description={recipe.Description}
-        ingredients = {recipe.ingredients}
-        image={recipe.image}
-        recipe={recipe}
-      />
-    );
-  });
+  if (loading) {
+  return (
+    <div style={{ display: "flex", justifyContent: "center", padding: "40px" }}>
+      <div className="spinner" />
+    </div>
+  );
+}
 
-  return <>
-    <div className="">{HotRecipe}</div> 
-    </>
-  
+  return (
+    <div className="fade-in">
+      {recipe.map((item) => (
+        <Hotpanel
+          key={item._id}
+          id={item._id}
+          title={item.Title}
+          description={item.Description}
+          image={item.image}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default Hot;

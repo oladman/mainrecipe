@@ -1,5 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* THEME VARIABLES */
+:root {
+  --theme-color: #e11d48; /* change once, updates all loaders */
+}
+
+/* SPINNER */
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--theme-color);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SKELETON BASE */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e5e5e5 37%,
+    #f0f0f0 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+  border-radius: 6px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* SKELETON SHAPES */
+.skeleton-image {
+  width: 100%;
+  height: 180px;
+}
+
+.skeleton-text {
+  height: 14px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #wrapper {
   max-width: 1280px;
   margin-left: auto;
@@ -483,6 +556,21 @@ li:active {
 
 .ad-two img {
   width: 250px;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e5e5;
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .category-recipe:hover {

@@ -1,48 +1,57 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import RecipePanel from "./RecipePanel";
+import HotSkeleton from "../../components/HotSkeleton"; 
 
 function Recipe() {
-  const [Recipe, setRecipe] = useState([]);
+  const [recipe, setRecipe] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-        axios
-    .get(`${process.env.REACT_APP_API_URL}/getRecipe`, {
-      params: {
-        _limit: 20,
-      },
-    })
+    setLoading(true);
+
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/getRecipe`, {
+        params: { _limit: 20 },
+      })
       .then((res) => {
         setRecipe(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, []);
 
-  const NewRecipe = Recipe.map((recipe, index) => {
+  if (loading) {
     return (
-      <RecipePanel
-        key={index}
-        id={recipe._id}
-        title={recipe.Title}
-        body={recipe.Body}
-        ingredients = {recipe.ingredients}
-        image={recipe.image}
-        time={recipe.time}
-        recipe={recipe}
-        tag={recipe.tag}
-      />
+      <div className="overal-post-container">
+        {[...Array(10)].map((_, index) => (
+          <HotSkeleton key={index} />
+        ))}
+      </div>
     );
-  });
+  }
 
-  return<>
-  
-  <div className="overal-post-container">{NewRecipe}</div> 
-  
-
-  
-  
-  </> 
+  return (
+    <div className="overal-post-container fade-in">
+      {recipe.map((item) => (
+        <RecipePanel
+          key={item._id}
+          id={item._id}
+          title={item.Title}
+          body={item.Body}
+          ingredients={item.ingredients}
+          image={item.image}
+          time={item.time}
+          recipe={item}
+          tag={item.tag}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default Recipe;
